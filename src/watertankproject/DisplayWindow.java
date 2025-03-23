@@ -8,12 +8,12 @@ package watertankproject;
  *
  * @author dinushi
  */
-public class AlarmWindow extends javax.swing.JFrame implements WaterLevelObservable{
+public class DisplayWindow extends javax.swing.JFrame implements WaterLevelObservable{
 
     /**
-     * Creates new form AlarmWindow
+     * Creates new form DisplayWindow
      */
-    public AlarmWindow() {
+    public DisplayWindow() {
         initComponents();
     }
 
@@ -26,35 +26,34 @@ public class AlarmWindow extends javax.swing.JFrame implements WaterLevelObserva
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblAlarmStatus = new javax.swing.JLabel();
+        lblWaterLevel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Alarm Window");
-        setBackground(new java.awt.Color(180, 208, 215));
-        setPreferredSize(new java.awt.Dimension(400, 400));
+        setTitle("Display Window");
+        setBackground(new java.awt.Color(178, 215, 162));
 
-        lblAlarmStatus.setBackground(new java.awt.Color(171, 157, 217));
-        lblAlarmStatus.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
-        lblAlarmStatus.setForeground(new java.awt.Color(0, 0, 0));
-        lblAlarmStatus.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblAlarmStatus.setText("Alarm : ");
-        lblAlarmStatus.setOpaque(true);
+        lblWaterLevel.setBackground(new java.awt.Color(137, 152, 211));
+        lblWaterLevel.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
+        lblWaterLevel.setForeground(new java.awt.Color(0, 0, 0));
+        lblWaterLevel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblWaterLevel.setText("Water Level :");
+        lblWaterLevel.setOpaque(true);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addComponent(lblAlarmStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addGap(67, 67, 67)
+                .addComponent(lblWaterLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(67, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(150, 150, 150)
-                .addComponent(lblAlarmStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(151, Short.MAX_VALUE))
+                .addGap(156, 156, 156)
+                .addComponent(lblWaterLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(156, Short.MAX_VALUE))
         );
 
         pack();
@@ -77,13 +76,13 @@ public class AlarmWindow extends javax.swing.JFrame implements WaterLevelObserva
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AlarmWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DisplayWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AlarmWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DisplayWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AlarmWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DisplayWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AlarmWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DisplayWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -91,19 +90,17 @@ public class AlarmWindow extends javax.swing.JFrame implements WaterLevelObserva
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                AlarmWindow alarmWindow = new AlarmWindow();
-                alarmWindow.setVisible(true);
-                System.out.println("size "+ alarmWindow.getSize());
+                new DisplayWindow().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel lblAlarmStatus;
+    private javax.swing.JLabel lblWaterLevel;
     // End of variables declaration//GEN-END:variables
 
     @Override
     public void update(int waterLevel) {
-        lblAlarmStatus.setText("Alarm : " + (waterLevel >= 50 ? "ON" : "OFF"));
+        lblWaterLevel.setText("Water Level : "+waterLevel);
     }
 }

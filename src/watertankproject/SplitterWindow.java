@@ -8,12 +8,12 @@ package watertankproject;
  *
  * @author dinushi
  */
-public class AlarmWindow extends javax.swing.JFrame implements WaterLevelObservable{
+public class SplitterWindow extends javax.swing.JFrame implements WaterLevelObservable{
 
     /**
-     * Creates new form AlarmWindow
+     * Creates new form SplitterWindow
      */
-    public AlarmWindow() {
+    public SplitterWindow() {
         initComponents();
     }
 
@@ -26,35 +26,37 @@ public class AlarmWindow extends javax.swing.JFrame implements WaterLevelObserva
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblAlarmStatus = new javax.swing.JLabel();
+        lblSplitter = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Alarm Window");
-        setBackground(new java.awt.Color(180, 208, 215));
-        setPreferredSize(new java.awt.Dimension(400, 400));
+        setTitle("Splitter Window");
+        setBackground(new java.awt.Color(224, 221, 171));
 
-        lblAlarmStatus.setBackground(new java.awt.Color(171, 157, 217));
-        lblAlarmStatus.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
-        lblAlarmStatus.setForeground(new java.awt.Color(0, 0, 0));
-        lblAlarmStatus.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblAlarmStatus.setText("Alarm : ");
-        lblAlarmStatus.setOpaque(true);
+        lblSplitter.setBackground(new java.awt.Color(207, 170, 145));
+        lblSplitter.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
+        lblSplitter.setForeground(new java.awt.Color(0, 0, 0));
+        lblSplitter.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSplitter.setText("Splitter : ");
+        lblSplitter.setMaximumSize(new java.awt.Dimension(162, 47));
+        lblSplitter.setMinimumSize(new java.awt.Dimension(162, 47));
+        lblSplitter.setOpaque(true);
+        lblSplitter.setPreferredSize(new java.awt.Dimension(162, 47));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addComponent(lblAlarmStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addGap(71, 71, 71)
+                .addComponent(lblSplitter, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(71, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(150, 150, 150)
-                .addComponent(lblAlarmStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(151, Short.MAX_VALUE))
+                .addGap(148, 148, 148)
+                .addComponent(lblSplitter, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(149, Short.MAX_VALUE))
         );
 
         pack();
@@ -77,33 +79,30 @@ public class AlarmWindow extends javax.swing.JFrame implements WaterLevelObserva
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AlarmWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SplitterWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AlarmWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SplitterWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AlarmWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SplitterWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AlarmWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SplitterWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
             public void run() {
-                AlarmWindow alarmWindow = new AlarmWindow();
-                alarmWindow.setVisible(true);
-                System.out.println("size "+ alarmWindow.getSize());
+                new SplitterWindow().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel lblAlarmStatus;
+    private javax.swing.JLabel lblSplitter;
     // End of variables declaration//GEN-END:variables
 
     @Override
     public void update(int waterLevel) {
-        lblAlarmStatus.setText("Alarm : " + (waterLevel >= 50 ? "ON" : "OFF"));
+        lblSplitter.setText(text);
     }
 }
