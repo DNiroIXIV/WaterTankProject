@@ -15,6 +15,7 @@ public class DisplayWindow extends javax.swing.JFrame implements WaterLevelObser
      */
     public DisplayWindow() {
         initComponents();
+        getContentPane().setBackground(new java.awt.Color(178, 215, 162));
     }
 
     /**
@@ -30,7 +31,6 @@ public class DisplayWindow extends javax.swing.JFrame implements WaterLevelObser
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Display Window");
-        setBackground(new java.awt.Color(178, 215, 162));
 
         lblWaterLevel.setBackground(new java.awt.Color(137, 152, 211));
         lblWaterLevel.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N

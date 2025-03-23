@@ -8,15 +8,14 @@ package watertankproject;
  *
  * @author dinushi
  */
-public class SplitterWindow extends javax.swing.JFrame implements WaterLevelObservable{
+public class SMSSender extends javax.swing.JFrame {
 
     /**
-     * Creates new form SplitterWindow
+     * Creates new form SMSSender
      */
-    public SplitterWindow() {
+    public SMSSender() {
         initComponents();
-        getContentPane().setBackground(new java.awt.Color(224, 221, 171));
-        
+        getContentPane().setBackground(new java.awt.Color(235, 235, 184));
     }
 
     /**
@@ -28,36 +27,19 @@ public class SplitterWindow extends javax.swing.JFrame implements WaterLevelObse
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblSplitter = new javax.swing.JLabel();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Splitter Window");
-
-        lblSplitter.setBackground(new java.awt.Color(207, 170, 145));
-        lblSplitter.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
-        lblSplitter.setForeground(new java.awt.Color(0, 0, 0));
-        lblSplitter.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblSplitter.setText("Splitter : ");
-        lblSplitter.setMaximumSize(new java.awt.Dimension(162, 47));
-        lblSplitter.setMinimumSize(new java.awt.Dimension(162, 47));
-        lblSplitter.setOpaque(true);
-        lblSplitter.setPreferredSize(new java.awt.Dimension(162, 47));
+        setTitle("Message Window");
+        setBackground(new java.awt.Color(235, 235, 184));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(71, 71, 71)
-                .addComponent(lblSplitter, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(71, Short.MAX_VALUE))
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(148, 148, 148)
-                .addComponent(lblSplitter, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(149, Short.MAX_VALUE))
+            .addGap(0, 400, Short.MAX_VALUE)
         );
 
         pack();
@@ -80,30 +62,24 @@ public class SplitterWindow extends javax.swing.JFrame implements WaterLevelObse
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SplitterWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SMSSender.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SplitterWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SMSSender.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SplitterWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SMSSender.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SplitterWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SMSSender.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SplitterWindow().setVisible(true);
+                new SMSSender().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel lblSplitter;
     // End of variables declaration//GEN-END:variables
-
-    @Override
-    public void update(int waterLevel) {
-        lblSplitter.setText("Splitter : " + (waterLevel >= 75 ? "ON" : "OFF"));
-    }
 }

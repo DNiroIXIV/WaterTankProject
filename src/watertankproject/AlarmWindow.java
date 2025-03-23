@@ -15,6 +15,7 @@ public class AlarmWindow extends javax.swing.JFrame implements WaterLevelObserva
      */
     public AlarmWindow() {
         initComponents();
+        getContentPane().setBackground(new java.awt.Color(180, 208, 215));
     }
 
     /**
@@ -30,7 +31,6 @@ public class AlarmWindow extends javax.swing.JFrame implements WaterLevelObserva
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Alarm Window");
-        setBackground(new java.awt.Color(180, 208, 215));
         setPreferredSize(new java.awt.Dimension(400, 400));
 
         lblAlarmStatus.setBackground(new java.awt.Color(171, 157, 217));
