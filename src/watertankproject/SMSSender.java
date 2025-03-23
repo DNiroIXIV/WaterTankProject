@@ -15,7 +15,7 @@ public class SMSSender extends javax.swing.JFrame {
      */
     public SMSSender() {
         initComponents();
-        getContentPane().setBackground(new java.awt.Color(235, 235, 184));
+        getContentPane().setBackground(new java.awt.Color(190, 177, 177));
     }
 
     /**
@@ -27,19 +27,33 @@ public class SMSSender extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lblSMS = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Message Window");
-        setBackground(new java.awt.Color(235, 235, 184));
+
+        lblSMS.setBackground(new java.awt.Color(171, 157, 217));
+        lblSMS.setFont(new java.awt.Font("sansserif", 1, 36)); // NOI18N
+        lblSMS.setForeground(new java.awt.Color(0, 0, 0));
+        lblSMS.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSMS.setText("Sending SMS....");
+        lblSMS.setOpaque(true);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(lblSMS, javax.swing.GroupLayout.PREFERRED_SIZE, 433, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(34, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(144, 144, 144)
+                .addComponent(lblSMS, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(144, Short.MAX_VALUE))
         );
 
         pack();
@@ -74,6 +88,7 @@ public class SMSSender extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new SMSSender().setVisible(true);
             }
@@ -81,5 +96,6 @@ public class SMSSender extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel lblSMS;
     // End of variables declaration//GEN-END:variables
 }
