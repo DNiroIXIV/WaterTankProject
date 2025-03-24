@@ -45,7 +45,7 @@
     <Component class="javax.swing.JLabel" name="lblSMS">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="d9" green="9d" red="ab" type="rgb"/>
+          <Color blue="d3" green="98" red="89" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="sansserif" size="36" style="1"/>

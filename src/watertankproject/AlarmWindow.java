@@ -15,7 +15,8 @@ public class AlarmWindow extends javax.swing.JFrame implements WaterLevelObserve
      */
     public AlarmWindow() {
         initComponents();
-        getContentPane().setBackground(new java.awt.Color(180, 208, 215));
+        getContentPane().setBackground(new java.awt.Color(144, 166, 167));
+        setVisible(true);
     }
 
     /**
@@ -31,9 +32,8 @@ public class AlarmWindow extends javax.swing.JFrame implements WaterLevelObserve
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Alarm Window");
-        setPreferredSize(new java.awt.Dimension(400, 400));
 
-        lblAlarmStatus.setBackground(new java.awt.Color(171, 157, 217));
+        lblAlarmStatus.setBackground(new java.awt.Color(137, 152, 211));
         lblAlarmStatus.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
         lblAlarmStatus.setForeground(new java.awt.Color(0, 0, 0));
         lblAlarmStatus.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -59,44 +59,6 @@ public class AlarmWindow extends javax.swing.JFrame implements WaterLevelObserve
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AlarmWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AlarmWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AlarmWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AlarmWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                AlarmWindow alarmWindow = new AlarmWindow();
-                alarmWindow.setVisible(true);
-                System.out.println("size "+ alarmWindow.getSize());
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel lblAlarmStatus;

@@ -10,7 +10,7 @@ import java.util.ArrayList;
  *
  * @author dinushi
  */
-public class WaterLevelObservable {
+public class WaterLevelObservable implements WaterLevelObservableInterface{
 
     private final ArrayList<WaterLevelObserver> observerList = new ArrayList<>();
     private int waterLevel;
@@ -19,6 +19,7 @@ public class WaterLevelObservable {
         observerList.add(waterLevelObserver);
     }
 
+    @Override
     public void setWaterLevel(int waterLevel) {
         if (this.waterLevel != waterLevel) {
             this.waterLevel = waterLevel;

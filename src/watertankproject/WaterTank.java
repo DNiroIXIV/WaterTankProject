@@ -11,13 +11,18 @@ import java.awt.Color;
  * @author dinushi
  */
 public class WaterTank extends javax.swing.JFrame {
-
+    
+    private final WaterLevelObservableInterface waterLevelObservableInterface;
+    
     /**
      * Creates new form WaterTank
+     * @param waterLevelObservableInterface
      */
-    public WaterTank() {
+    public WaterTank(WaterLevelObservableInterface waterLevelObservableInterface) {
         initComponents();
         getContentPane().setBackground(new Color(158, 205, 214));
+        this.waterLevelObservableInterface = waterLevelObservableInterface;
+        setVisible(true);
     }
 
     /**
@@ -42,6 +47,11 @@ public class WaterTank extends javax.swing.JFrame {
         waterLevelSlider.setPaintLabels(true);
         waterLevelSlider.setPaintTicks(true);
         waterLevelSlider.setOpaque(true);
+        waterLevelSlider.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                waterLevelSliderStateChanged(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -63,41 +73,10 @@ public class WaterTank extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(WaterTank.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(WaterTank.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(WaterTank.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(WaterTank.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new WaterTank().setVisible(true);
-            }
-        });
-    }
+    private void waterLevelSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_waterLevelSliderStateChanged
+        int waterLevel = waterLevelSlider.getValue();
+        waterLevelObservableInterface.setWaterLevel(waterLevel);
+    }//GEN-LAST:event_waterLevelSliderStateChanged
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JSlider waterLevelSlider;
