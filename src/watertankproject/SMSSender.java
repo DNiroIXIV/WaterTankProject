@@ -8,7 +8,7 @@ package watertankproject;
  *
  * @author dinushi
  */
-public class SMSSender extends javax.swing.JFrame {
+public class SMSSender extends javax.swing.JFrame implements WaterLevelObserver{
 
     /**
      * Creates new form SMSSender
@@ -98,4 +98,9 @@ public class SMSSender extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel lblSMS;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void update(int waterLevel) {
+        lblSMS.setText("Sending SMS..."+waterLevel);
+    }
 }

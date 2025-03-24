@@ -8,7 +8,7 @@ package watertankproject;
  *
  * @author dinushi
  */
-public class DisplayWindow extends javax.swing.JFrame implements WaterLevelObservable{
+public class DisplayWindow extends javax.swing.JFrame implements WaterLevelObserver{
 
     /**
      * Creates new form DisplayWindow
