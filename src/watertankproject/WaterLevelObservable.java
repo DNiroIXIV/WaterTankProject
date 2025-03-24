@@ -17,6 +17,7 @@ public class WaterLevelObservable implements WaterLevelObservableInterface{
 
     public void addWaterLevelObserver(WaterLevelObserver waterLevelObserver) {
         observerList.add(waterLevelObserver);
+        waterLevelObserver.update(waterLevel);
     }
 
     @Override

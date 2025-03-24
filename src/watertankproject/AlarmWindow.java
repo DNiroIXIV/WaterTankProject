@@ -66,6 +66,6 @@ public class AlarmWindow extends javax.swing.JFrame implements WaterLevelObserve
 
     @Override
     public void update(int waterLevel) {
-        lblAlarmStatus.setText("Alarm : " + (waterLevel >= 50 ? "ON" : "OFF"));
+        lblAlarmStatus.setText("Alarm : " + (waterLevel > 50 ? "ON" : "OFF"));
     }
 }

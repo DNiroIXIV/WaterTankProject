@@ -12,16 +12,15 @@ import java.awt.Color;
  */
 public class WaterTank extends javax.swing.JFrame {
     
-    private final WaterLevelObservableInterface waterLevelObservableInterface;
+    private WaterLevelObservableInterface waterLevelObservableInterface;
     
     /**
      * Creates new form WaterTank
      * @param waterLevelObservableInterface
      */
-    public WaterTank(WaterLevelObservableInterface waterLevelObservableInterface) {
+    public WaterTank() {
         initComponents();
-        getContentPane().setBackground(new Color(158, 205, 214));
-        this.waterLevelObservableInterface = waterLevelObservableInterface;
+        getContentPane().setBackground(new Color(158, 205, 214));        
         setVisible(true);
     }
 
@@ -74,10 +73,14 @@ public class WaterTank extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void waterLevelSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_waterLevelSliderStateChanged
-        int waterLevel = waterLevelSlider.getValue();
-        waterLevelObservableInterface.setWaterLevel(waterLevel);
+        waterLevelObservableInterface.setWaterLevel(waterLevelSlider.getValue());
     }//GEN-LAST:event_waterLevelSliderStateChanged
 
+    public void addWaterLevelObservable(WaterLevelObservableInterface waterLevelObservableInterface){
+        this.waterLevelObservableInterface = waterLevelObservableInterface;        
+        waterLevelObservableInterface.setWaterLevel(waterLevelSlider.getValue());
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JSlider waterLevelSlider;
     // End of variables declaration//GEN-END:variables
