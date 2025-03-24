@@ -33,4 +33,8 @@ public class WaterLevelObservable implements WaterLevelObservableInterface{
             waterLevelObserver.update(waterLevel);
         }
     }
+    
+    public void removeWaterLevelObserver(WaterLevelObserver waterLevelObserver){
+        observerList.remove(waterLevelObserver);
+    }
 }

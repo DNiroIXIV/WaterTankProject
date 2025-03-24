@@ -22,7 +22,7 @@ public class Start {
         
         waterLevelObservable.addWaterLevelObserver(new AlarmWindow());
         waterLevelObservable.addWaterLevelObserver(new DisplayWindow());
-        waterLevelObservable.addWaterLevelObserver(new SplitterWindow());
-        waterLevelObservable.addWaterLevelObserver(new SMSSender());
+        waterLevelObservable.addWaterLevelObserver(new SplitterWindow());              
+        waterLevelObservable.addWaterLevelObserver(new SMSSenderWindow());
     }    
 }

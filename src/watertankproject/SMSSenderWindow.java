@@ -8,12 +8,12 @@ package watertankproject;
  *
  * @author dinushi
  */
-public class SMSSender extends javax.swing.JFrame implements WaterLevelObserver{
+public class SMSSenderWindow extends javax.swing.JFrame implements WaterLevelObserver{
 
     /**
      * Creates new form SMSSender
      */
-    public SMSSender() {
+    public SMSSenderWindow() {
         initComponents();
         getContentPane().setBackground(new java.awt.Color(190, 177, 177));
         setVisible(true);
