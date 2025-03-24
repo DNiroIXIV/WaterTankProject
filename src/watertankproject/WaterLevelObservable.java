@@ -5,7 +5,6 @@
 package watertankproject;
 
 import java.util.ArrayList;
-import java.util.concurrent.ArrayBlockingQueue;
 
 /**
  *
@@ -13,7 +12,7 @@ import java.util.concurrent.ArrayBlockingQueue;
  */
 public class WaterLevelObservable {
 
-    private ArrayList<WaterLevelObserver> observerList = new ArrayList<>();
+    private final ArrayList<WaterLevelObserver> observerList = new ArrayList<>();
     private int waterLevel;
 
     public void addWaterLevelObserver(WaterLevelObserver waterLevelObserver) {
