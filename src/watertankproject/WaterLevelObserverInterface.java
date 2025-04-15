@@ -8,6 +8,6 @@ package watertankproject;
  *
  * @author dinushi
  */
-public interface WaterLevelObservableInterface {
+public interface WaterLevelObserverInterface {
     public void setWaterLevel(int waterLevel);
 }

@@ -8,7 +8,7 @@ package watertankproject;
  *
  * @author dinushi
  */
-public class SplitterWindow extends javax.swing.JFrame implements WaterLevelObserver{
+public class SplitterWindow extends javax.swing.JFrame implements WaterLevelObservable{
 
     /**
      * Creates new form SplitterWindow

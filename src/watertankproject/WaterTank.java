@@ -12,11 +12,10 @@ import java.awt.Color;
  */
 public class WaterTank extends javax.swing.JFrame {
     
-    private WaterLevelObservableInterface waterLevelObservableInterface;
+    private WaterLevelObserverInterface waterLevelObserverInterface;
     
     /**
      * Creates new form WaterTank
-     * @param waterLevelObservableInterface
      */
     public WaterTank() {
         initComponents();
@@ -73,12 +72,12 @@ public class WaterTank extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void waterLevelSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_waterLevelSliderStateChanged
-        waterLevelObservableInterface.setWaterLevel(waterLevelSlider.getValue());
+        waterLevelObserverInterface.setWaterLevel(waterLevelSlider.getValue());
     }//GEN-LAST:event_waterLevelSliderStateChanged
 
-    public void addWaterLevelObservable(WaterLevelObservableInterface waterLevelObservableInterface){
-        this.waterLevelObservableInterface = waterLevelObservableInterface;        
-        waterLevelObservableInterface.setWaterLevel(waterLevelSlider.getValue());
+    public void addWaterLevelObserver(WaterLevelObserverInterface waterLevelObserverInterface){
+        this.waterLevelObserverInterface = waterLevelObserverInterface;        
+        waterLevelObserverInterface.setWaterLevel(waterLevelSlider.getValue());
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

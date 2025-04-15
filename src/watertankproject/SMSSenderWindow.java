@@ -8,7 +8,7 @@ package watertankproject;
  *
  * @author dinushi
  */
-public class SMSSenderWindow extends javax.swing.JFrame implements WaterLevelObserver{
+public class SMSSenderWindow extends javax.swing.JFrame implements WaterLevelObservable{
 
     /**
      * Creates new form SMSSender

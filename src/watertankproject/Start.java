@@ -16,13 +16,13 @@ public class Start {
     public static void main(String[] args) {
         WaterTank waterTank = new WaterTank();
         
-        WaterLevelObservable waterLevelObservable = new WaterLevelObservable();
+        WaterLevelObserver waterLevelObserver = new WaterLevelObserver();
         
-        waterTank.addWaterLevelObservable(waterLevelObservable);
+        waterTank.addWaterLevelObserver(waterLevelObserver);
         
-        waterLevelObservable.addWaterLevelObserver(new AlarmWindow());
-        waterLevelObservable.addWaterLevelObserver(new DisplayWindow());
-        waterLevelObservable.addWaterLevelObserver(new SplitterWindow());              
-        waterLevelObservable.addWaterLevelObserver(new SMSSenderWindow());
+        waterLevelObserver.addWaterLevelObservable(new AlarmWindow());
+        waterLevelObserver.addWaterLevelObservable(new DisplayWindow());
+        waterLevelObserver.addWaterLevelObservable(new SplitterWindow());              
+        waterLevelObserver.addWaterLevelObservable(new SMSSenderWindow());
     }    
 }
